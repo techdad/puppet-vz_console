@@ -1,0 +1,15 @@
+{
+  "name": "puppet-vz_console",
+  "version": "0.1.0",
+  "author": "techdad",
+  "summary": null,
+  "license": "Module to enable OpenVZ console (primarily for pve 3.x containers).",
+  "source": "https://github.com/techdad/puppet-vz_console",
+  "project_page": "https://github.com/techdad/puppet-vz_console",
+  "issues_url": "https://github.com/techdad/puppet-vz_console/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ],
+  "data_provider": null
+}
+
