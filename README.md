@@ -15,18 +15,22 @@ Enable the OpenVZ login console.
  * Primarily targetted at Proxmox PVE 3.x containers.
  * Initial version is for *Centos / RHEL 6.x only!*
 
-[ Reference: [pve.proxmox.com/wiki/OpenVZ_Console](https://pve.proxmox.com/wiki/OpenVZ_Console) ]
 
 ## Usage
 
-(put usage example here)
+Very simple, just include the class:
+
+```
+node default {
+
+    include vz_console
+
+}
+```
 
 ## Reference
 
-Here, include a complete list of your module's classes, types, providers,
-facts, along with the parameters for each. Users refer to this section (thus
-the name "Reference") to find specific details; most users don't read it per
-se.
+There are no variables to set, this module is a direct puppet implementation of the instructions at: [pve.proxmox.com/wiki/OpenVZ_Console](https://pve.proxmox.com/wiki/OpenVZ_Console).
 
 ## Development
 

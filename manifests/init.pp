@@ -1,48 +1,43 @@
 # Class: vz_console
 # ===========================
 #
-# Full description of class vz_console here.
-#
-# Parameters
-# ----------
-#
-# Document parameters here.
-#
-# * `sample parameter`
-# Explanation of what this parameter affects and what it defaults to.
-# e.g. "Specify one or more upstream ntp servers as an array."
-#
-# Variables
-# ----------
-#
-# Here you should define a list of variables that this module would require.
-#
-# * `sample variable`
-#  Explanation of how this variable affects the function of this class and if
-#  it has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#  External Node Classifier as a comma separated list of hostnames." (Note,
-#  global variables should be avoided in favor of class parameters as
-#  of Puppet 2.6.)
+# Enable the OpenVZ login console.
 #
 # Examples
 # --------
 #
 # @example
-#    class { 'vz_console':
-#      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#    }
+#    {
+#		include vz_console
+#	}
 #
 # Authors
 # -------
 #
-# Author Name <author@domain.com>
+# Daniel Shaw <daniel@techdad.xyz>
 #
-# Copyright
-# ---------
+# License
+# -------
 #
-# Copyright 2016 Your name here, unless otherwise noted.
+# Apache 2.0
 #
+
 class vz_console {
 
-
+# create the config
+file { "/etc/init/tty.conf":
+		ensure	=> file,
+		owner	=> 'root',
+		group	=> 'root',
+		mode	=> '0644',
+		source	=> 'puppet:///modules/vz_console/tty.conf',
 }
+
+# start the tty service in init, when config changes
+exec { "start_tty":
+		command		=> 'start tty',
+		subscribe	=> File['/etc/init/tty.conf'],
+		refreshonly	=> true,
+}
+
+# eof
