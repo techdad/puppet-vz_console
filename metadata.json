@@ -1,6 +1,6 @@
 {
   "name": "techdad-vz_console",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "techdad",
   "summary": "Module to enable OpenVZ console (primarily for pve 3.x containers).",
   "license": "Apache-2.0",
