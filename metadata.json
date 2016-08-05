@@ -1,6 +1,6 @@
 {
   "name": "puppet-vz_console",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "author": "techdad",
   "summary": null,
   "license": "Module to enable OpenVZ console (primarily for pve 3.x containers).",
