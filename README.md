@@ -6,6 +6,7 @@
 1. [Usage - Configuration options and additional functionality](#usage)
 1. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 1. [Development - Guide for contributing to the module](#development)
+1. [Roadmap - The whishlist/to do loist for module development](#roadmap)
 
 ## Description
 
@@ -30,3 +31,7 @@ se.
 ## Development
 
 Just send a pull request.
+
+## Roadmap
+
+Add support for other distributions and releases (CentOS/RHEL 7.x, Debian, Ubunutu, etc.)
